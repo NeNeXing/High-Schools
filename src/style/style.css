@@ -1,0 +1,158 @@
+html, body{
+  height:100%;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+#head-text-left {
+  transform:rotate(-24deg);
+  -ms-transform:rotate(-24deg);
+  -moz-transform:rotate(-24deg);
+  -webkit-transform:rotate(-24deg);
+  -o-transform:rotate(-24deg);
+  transform-origin: right;
+  -ms-transform-origin: right;
+  -moz-transform-origin: right;
+  -webkit-transform-origin: right;
+  -o-transform-origin: right;
+  opacity: 0;
+}
+
+#head-text-right {
+  transform:rotate(-24deg);
+  -ms-transform:rotate(-24deg);
+  -moz-transform:rotate(-24deg);
+  -webkit-transform:rotate(-24deg);
+  -o-transform:rotate(-24deg);
+  transform-origin: left;
+  -ms-transform-origin: left;
+  -moz-transform-origin: left;
+  -webkit-transform-origin: left;
+  -o-transform-origin: left;
+  opacity: 0;
+}
+
+.rotate {
+/*transform-origin: 25% 50%;
+-ms-transform-origin: 25% 50%;
+-moz-transform-origin: 25% 50%;
+-webkit-transform-origin: 25% 50%;
+-o-transform-origin: 25% 50%;*/
+transform:rotate(14deg);
+-ms-transform:rotate(14deg);
+-moz-transform:rotate(14deg);
+-webkit-transform:rotate(14deg);
+-o-transform:rotate(14deg);
+transition: all 1s;
+-moz-transition: all 1s; /* Firefox 4 */
+-webkit-transition: all 1s; /* Safari 和 Chrome */
+-o-transition: all 1s; /* Opera */
+}
+
+.index-left {
+  background: #ccc;
+  min-height: 100%;
+  background: url('../../assets/images/bg1.jpg');
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.index-right {
+  background: #ddd;
+  min-height: 100%;
+  background: url('../../assets/images/bg2.jpg');
+  background-size: 100% 100%;
+  position: relative;
+}
+
+
+.index-left:hover {
+  opacity: 1;
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari 和 Chrome */
+  -o-transition: all 1s; /* Opera */
+  background: url('../../assets/images/h1-mask.jpg');
+  background-size: 100% 100%;
+}
+
+
+.index-right:hover {
+  opacity: 1;
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari 和 Chrome */
+  -o-transition: all 1s; /* Opera */
+  background: url('../../assets/images/h2-mask.jpg');
+  background-size: 100% 100%;
+}
+
+
+
+.width100 {
+  width: 100%;
+}
+.width40 {
+  width: 40%;
+}
+.width25 {
+  width: 25%;
+}
+.width15 {
+  width: 15%;
+}
+
+.block {
+  display: block;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+}
+
+.navbar.sz {
+  background: #333;
+  border-bottom: 0;
+}
+
+.navbar.sz .navbar-nav a:hover {
+  background: #333;
+}
+
+.navbar-inverse.sz .navbar-nav>.active>a {
+  background: #54814e;
+}
+
+.navbar.ez {
+  background: #333;
+  border-bottom: 0;
+}
+
+.navbar.ez .navbar-nav a:hover {
+  background: #333;
+}
+
+.navbar-inverse.ez .navbar-nav>.active>a {
+  background: #7e6b5a;
+}
+
+.dropdown-menu {
+  background: #333;
+  color: #fff;
+}
+.dropdown-menu > li > a {
+  color: #fff;
+}
+
+.dropdown-menu > li > a:hover {
+  color: #aaa;
+}

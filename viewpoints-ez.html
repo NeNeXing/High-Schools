@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>河北深州市中学 － 高中</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/style/style.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 50px;
+      }
+
+
+
+      .navbar-nav li a {
+        font-size: 16px;
+      }
+
+      .gotoanother {
+        opacity: 0;
+      }
+      .gotoanother:hover {
+        opacity: 1;
+        transition: all 1s;
+        -moz-transition: all 1s; /* Firefox 4 */
+        -webkit-transition: all 1s; /* Safari 和 Chrome */
+        -o-transition: all 1s; /* Opera */
+      }
+
+
+      .quote-area {
+        padding: 30px 20px;
+      }
+      .teacher-name {
+         color:#2f6722;
+         text-align: right;
+         line-height: 25px;
+      }
+      /*.dropdown:hover {
+        background: #313f30;
+      }*/
+
+      .speakingflow {
+        height: 690px;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .teacher-quote-white {
+        font-size: 52px;
+        font-weight: bold;
+        color: white;
+      }
+      .teacher-quote-black {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        padding-bottom: 20px;
+      }
+
+      .teacher-quote-white:before {
+        content: "";
+        display: inline-block;
+        background: url('assets/images/quote1.png') no-repeat;
+        background-size: contain;
+        width: 54px;
+        height: 68px;
+      }
+
+      .teacher-quote-white:after {
+        content: "";
+        display: inline-block;
+        background: url('assets/images/quote2.png') no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        width: 54px;
+        height: 68px;
+      }
+      .teacher-quote-black:before {
+        content: "";
+        display: inline-block;
+        background: url('assets/images/quote3.png') no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 30px;
+      }
+
+      .hoverlink {
+        display: inline-block;
+        width: 160px;
+        text-align: center;
+      }
+      .hoverlink:hover {
+        height: 50px;
+        border-bottom: 6px solid #7e6b5a !important;
+      }
+      #speakingflow1:hover, #speakingflow2:hover, #speakingflow3:hover {
+        cursor: pointer;
+      }
+
+      .xy-panel {
+        position: relative;
+        width: 340px;
+        height: 226px;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .xy-image {
+        position: absolute;
+      }
+
+      .xy-info {
+        text-shadow: 1px 1px 10px rgba(1, 1, 3, 0.4);
+        color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: table;
+        opacity: 0;
+      }
+
+      .xy-info-ez {
+        background: rgba(149, 134, 99, 0.85);
+      }
+
+      .xy-info-sz {
+        background: rgba(84, 129, 78, 0.8);
+      }
+
+      .xy-info-zz {
+        background: rgba(78, 90, 120, 0.85);
+      }
+
+      .xy-info-text {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .xy-info-text > h2 {
+        text-align: center;
+        font-size: 34px;
+      }
+
+      .xy-info-text > p {
+        width: 70%;
+        margin: 20px auto 0;
+        line-height: 2em;
+      }
+
+      .jr-panel {
+        position: relative;
+        width: 240px;
+        height: 160px;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .jr-image {
+        position: absolute;
+      }
+
+      .jr-info {
+        text-shadow: 1px 1px 10px rgba(1, 1, 3, 0.4);
+        color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: table;
+        opacity: 0;
+      }
+
+      .jr-info-ez {
+        background: rgba(149, 134, 99, 0.85);
+      }
+
+      .jr-info-sz {
+        background: rgba(84, 129, 78, 0.8);
+      }
+
+      .jr-info-text {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .jr-info-text > h2 {
+        text-align: center;
+        font-size: 34px;
+      }
+
+      .jr-info-text > p {
+        width: 70%;
+        margin: 10px auto 0;
+        line-height: 2em;
+      }
+
+      /*.col-md-4 > div {
+        color: black!important;
+      }
+
+      .col-md-3 > div {
+        color: black!important;
+      }*/
+
+      .quote-txt {
+        color: black;
+      }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <nav class="navbar ez navbar-default navbar-fixed-top navbar-inverse">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <a class="navbar-brand" href="index.html"><img alt="Brand" src="assets/images/head-logo-inverse.png" width="50" style="margin-top: -5px;margin-right: 10px;" /></a>
+              <li><a id="hoverlink1" class="hoverlink" href="visit-ez.html">参 观</a></li>
+              <li><a class="hoverlink" id="hoverlink2" href="experience-ez.html">经 历</a></li>
+              <li><a class="hoverlink" id="hoverlink3" href="images-ez.html">影 像</a></li>
+              <li class="active"><a class="hoverlink" id="hoverlink4" href="viewpoints-ez.html">争 鸣</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <img style="position: absolute; top: 5px; right: 32px;" src="assets/images/logo1.png" width="40" />
+              <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle gotoanother" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">去深州中学 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="visit-sz.html">参 观</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="experience-sz.html">经 历</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="images-sz.html">影 像</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="viewpoints-sz.html">争 鸣</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="row">
+          <div class="container-fluid" style="padding-top: 25px; background: url('assets/images/zhengming-bg.jpg') no-repeat; background-size: 100%;">
+            <div class="col-lg-offset-1 col-lg-5 col-md-6" style="height: 730px;">
+              <a style="text-decoration: none;" href="detail/zm-sxl.html"><div id="speakingflow1" class="speakingflow" style="height: 760px;background:rgba(0,0,0,0.5);">
+                <img src="assets/images/zhengming-flow-1.jpg" width="100%" alt="" />
+                <div class="quote-area">
+                  <div class="teacher-quote-white">&nbsp;&nbsp;二中教育，就是要不断超越自己。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div style="color: #c6ad74;margin-top: 15px;"><h1 style="display: inline-block;">孙先亮</h1> <span style="font-size: 20px;">| 青岛二中校长</span></div>
+                </div>
+              </div></a>
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <a style="text-decoration: none;" href="detail/zm-wzt.html"><div id="speakingflow2" style="background:white; background:rgba(255,255,255, 0.8);">
+                    <img src="assets/images/zhengming-flow-2.jpg" width="100%" alt="" />
+                    <div class="quote-area">
+                      <div class="teacher-quote-black">&nbsp;&nbsp;我觉得高考就像是坐车，坐在车上的人心态与车下人心态是不一样的。</div>
+                      <div class="teacher-name">
+                        <div style="font-weight:bold; font-size: 20px;">王子涛</div>
+                        <div>深州中学2017届实验班班主任</div>
+                      </div>
+                    </div>
+                  </div></a>
+                </div>
+                <div class="col-md-6">
+                  <a style="text-decoration: none;" href="detail/zm-lf.html"><div id="speakingflow3" style="background:white; background:rgba(255,255,255, 0.8);">
+                    <img src="assets/images/zhengming-flow-3.jpg" width="100%" alt="" />
+                    <div class="quote-area">
+                      <div class="teacher-quote-black">&nbsp;&nbsp;我是（本地）高中教育的受害者，也是受益者。</div>
+                      <div class="teacher-name">
+                        <div style="font-weight:bold; font-size: 20px;">柳飞</div>
+                        <div>深州中学2013届毕业生</div>
+                      </div>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="container">
+            <div class="row" style="margin-top: 100px;">
+              <div class="col-md-12">
+                <img style="display: inline-block;" src="assets/images/speak1.jpg" alt="" width="160" />
+                <div style="display: inline-block; width: 81%; height: 2px; margin-left: 30px; background:#8f8d8d;"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-4">
+                <a href="detail/zm-mhy.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy1.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>洪梅莹</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，<b>美术生</b>，中央美术学院建筑学大四，现于德国慕尼黑工业大学交换。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">它存在就有一定的合理性，<br />因为毕竟有的人需要这样的环境。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-wz.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy2.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>王真</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，<b>高三出国</b>继续读高中，现于美国就读本科。<br />&nbsp;</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">我觉得他们是能保证学生成绩的，<br />但他们能保证的也仅有成绩了。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-zp.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy3.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>周彭</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，青岛二中前学生会主席，北大经济学院<b>学生会主席</b>，将于清华大学就读研究生。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">如果高考是这样的话，<br />他们也只能继续这个样子。</div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-4">
+                <a href="detail/zm-yyh.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy4.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>由艳慧</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，华东师范大学<b>免费师范生</b>，2016年九月以<b>数学老师</b>身份回校实习。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">我对它（青岛二中）的评价是：<br />神奇。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-xht.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy5.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>肖昊天</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，全国<b>数学竞赛</b>银牌保送<b>清华数学系</b>，现于美国丹福大学交换。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">第一次创新是创新，<br />第二次创新就不是创新了。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-zzf.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy6.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>朱子凡</b> <span style="font-size: 18px;">| 二中校友<span></h2>
+                        <p>2013届毕业生，全国<b>数学竞赛</b>二等奖保送中科大，选择<b>回校复读</b>，后考取上交<b>提前批</b>，现于美国普渡大学就读。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">素质教育和语言学习是类似的，<br />不在合适的时间培养，过了这个时间<br />就永远不会有那样的高度了。</div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-4">
+                <a href="detail/zm-wyf.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy7.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>王亚飞</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，<b>国防生</b>，北京交通大学机械工程专业，即将进入军校学习并<b>参军</b>。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">高中学习是老师带着一步步<br />往前走，大学更像是独行。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-tjh.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy8.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>田佳浩</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，哈尔滨工业大学，任院学生会主席，因<b>现实问题</b>放弃文科选择了<b>理工类</b>学校。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">我们能改变自己命运最好的途径<br />是高考，残酷却又不失为一种锻炼。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-zyc.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy9.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>张颖超</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，上海交通大学<b>临床医学</b>专业，对于高中学习环境很<b>适应。</b></p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">高考是唯一简洁快速的出路，<br />值得我全力以赴。</div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-4">
+                <a href="detail/zm-csh.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy10.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>程思晗</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，中国民航大学<b>航空工程师</b>专业，因择业考虑<b>弃文选理</b>，院学生会主席，曾保送<b>法国交换</b>。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">我们的高中教育确实和其他人<br />不同，但我们的收获也不同。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-lf.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy11.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>柳飞</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，外交学院国际法专业，<b>偏重于文科</b>，但受限于高中理科优势选择理科，大学选回文科。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">在大学，对一个人的评价很多元。<br />对高中，有遗憾，也有感谢。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-lz.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/xy12.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-sz">
+                      <div class="xy-info-text">
+                        <h2><b>刘赞</b> <span style="font-size: 18px;">| 深中校友<span></h2>
+                        <p>2013届毕业生，北京大学心理学专业，作为<b>国防生</b>曾任14级新生<b>军训教官</b>。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">当地的教育模式更像是囚徒困境。<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img style="display: inline-block;" src="assets/images/speak2.jpg" alt="" width="160" />
+                <div style="display: inline-block; width: 81%; height: 2px; margin-left: 30px; background:#8f8d8d;"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-3">
+                <a href="detail/zm-lanns.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/jr1.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-ez">
+                      <div class="jr-info-text">
+                        <h2><b>蓝女士</b> <span style="font-size: 18px;">| 初中教师<span></h2>
+                        <p>二中毕业生王梓瑜的妈妈<br />女儿现苏州大学大四学生</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">应该推崇重视素质<br />发展的应试教育。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-liuxs.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/jr2.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-ez">
+                      <div class="jr-info-text">
+                        <h2><b>刘先生</b> <span style="font-size: 18px;">| 工程师<span></h2>
+                        <p>二中毕业生刘子豪的爸爸<br />儿子曾是铁饼体育特长生</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">对特长生应该<br />因人而异地培养。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-lixs&chenns.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/jr3.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-ez">
+                      <div class="jr-info-text">
+                        <h2 style="margin: 1px auto;"><b style="font-size: 26px;">李先生</b> <span style="font-size: 18px;">| 初中校长<span></h2>
+                        <h2 style="margin-top: 1px;"><b style="font-size: 26px;">陈女士</b> <span style="font-size: 18px;">| 工程师<span></h2>
+                        <p>二中毕业生李奂熹的父母</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">不能因为害怕争议<br />就放弃改革。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-lins.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/jr4.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-sz">
+                      <div class="jr-info-text">
+                        <h2><b>李女士</b> <span style="font-size: 18px;">| 务农<span></h2>
+                        <p>深中毕业生李竞的妈妈<br />女儿现中国传媒大学大四</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">在可数的选择当中<br />选择高考就要全力以赴。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img style="display: inline-block;" src="assets/images/speak3.jpg" alt="" width="160" />
+                <div style="display: inline-block; width: 81%; height: 2px; margin-left: 30px; background:#8f8d8d;"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-3">
+                <a href="detail/zm-wzt.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/ls1.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-sz">
+                      <div class="jr-info-text">
+                        <h2><b>王子涛</b> <span style="font-size: 18px;">| 深中教师<span></h2>
+                        <p>英语教师，从教16年<br />深中17届实验班班主任</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">不该矫情的时候不能矫情，<br />该努力的时候得努力。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-klh.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/ls2.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-sz">
+                      <div class="jr-info-text">
+                        <h2><b>康龙虎</b> <span style="font-size: 18px;">| 深中教师<span></h2>
+                        <p>语文教师，从教15年<br />深中17届普通班班主任</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">严格，对他们长远<br />来说是有帮助的。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-cyq.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/ls3.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-sz">
+                      <div class="jr-info-text">
+                        <h2><b>陈一琦</b> <span style="font-size: 18px;">| 深中教师<span></h2>
+                        <p>高三年级部干事，负责纪律<br />深中毕业生，16年7月入职</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#516a4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">真正作为一个老师的话，<br />责任感、使命感会更强。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+              <div class="col-md-3">
+                <a href="detail/zm-cz.html">
+                  <div class="jr-panel">
+                    <img class="jr-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/ls4.jpg" alt="" width="240" height="160" />
+                    <div class="jr-info jr-info-ez">
+                      <div class="jr-info-text">
+                        <h2><b>程志</b> <span style="font-size: 18px;">| 二中教师<span></h2>
+                        <p>数学教师，从教25年<br />数学MT首席导师</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 240px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">二中作为带头大哥，<br />一直在争议中前进着。<br />&nbsp;<br />&nbsp;</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <img style="display: inline-block;" src="assets/images/speak4.jpg" alt="" width="160" />
+                <div style="display: inline-block; width: 81%; height: 2px; margin-left: 30px; background:#8f8d8d;"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+              <div class="col-md-4">
+                <a href="detail/zm-sxl.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/zz1.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-ez">
+                      <div class="xy-info-text">
+                        <h2><b>孙先亮</b> <span style="font-size: 18px;">| 青岛二中校长<span></h2>
+                        <p>知名教育专家，享受国务院特殊津贴专家，出版专著《教育，为了每一个生命的激扬》</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="#6a5f4b" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">造就终身发展之生命主体。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-zyf.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/zz2.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-zz">
+                      <div class="xy-info-text">
+                        <h2><b>郑也夫</b> <span style="font-size: 18px;">| 社会学家<span></h2>
+                        <p>开放以后最早研究中国知识分子问题的社会学家。现任北京大学社会学系教授，著有《吾国教育病理》。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="rgb(78, 90, 120)" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">素质教育是逻辑不通的昏话，<br />过度复习是摧毁创造力的利器。</div>
+              </div>
+              <div class="col-md-4">
+                <a href="detail/zm-qlq.html">
+                  <div class="xy-panel">
+                    <img class="xy-image" style="box-shadow: 1px 1px 10px #aaa;" src="assets/images/zz3.jpg" alt="" width="340" height="226" />
+                    <div class="xy-info xy-info-zz">
+                      <div class="xy-info-text">
+                        <h2><b>钱理群</b> <span style="font-size: 18px;">| 人文学者<span></h2>
+                        <p>20世纪80年代以来中国最具影响力的人文学者之一。一直关注教育问题，多有撰述并为此奔走。</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="quote-txt" data-color="rgb(78, 90, 120)" style="width: 340px; text-align: center; line-height: 2em; font-size: 18px; margin: 20px 0;">现在，一切不能为应试教育<br />服务的教育根本无立足之地，<br />应试教育恰恰是反教育的。</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;margin: 150px 0 20px;">
+            <img src="assets/images/bottom.jpg" alt="" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="dist/js/bundle.js"></script>
+  <script type="text/javascript" src="dist/js/TweenMax.min.js"></script>
+  <script>
+    $('#speakingflow1').hover(function(){
+      TweenMax.to('#speakingflow1', 0.5, {
+        background: 'rgba(0,0,0,1)'
+      });
+    }, function(){
+      TweenMax.to('#speakingflow1', 0.5, {
+        background: 'rgba(0,0,0,0.5)'
+      });
+    });
+
+    $('#speakingflow2').hover(function(){
+      TweenMax.to('#speakingflow2', 0.5, {
+        background: 'rgba(255,255,255,1)'
+      });
+    }, function(){
+      TweenMax.to('#speakingflow2', 0.5, {
+        background: 'rgba(255,255,255,0.8)'
+      });
+    });
+
+    $('#speakingflow3').hover(function(){
+      TweenMax.to('#speakingflow3', 0.5, {
+        background: 'rgba(255,255,255,1)'
+      });
+    }, function(){
+      TweenMax.to('#speakingflow3', 0.5, {
+        background: 'rgba(255,255,255,0.8)'
+      });
+    });
+
+    // 方块栏目悬停效果
+    $('.xy-info').hover(function(){
+      TweenMax.to($(this), 0.6, {
+        opacity: '1',
+      });
+    }, function(){
+      TweenMax.to($(this), 0.6, {
+        opacity: '0'
+      });
+    });
+
+    $('.jr-info').hover(function(){
+      TweenMax.to($(this), 0.6, {
+        opacity: '1',
+      });
+    }, function(){
+      TweenMax.to($(this), 0.6, {
+        opacity: '0'
+      });
+    });
+
+    // 悬停时下方文字颜色
+    function turnColor (selector) {
+      $(selector).hover(function(){
+        var $txt = $(this).parent().parent().children('.quote-txt');
+        var color = $txt.attr('data-color');
+
+        console.log(color);
+        console.log($txt);
+
+        // $txt.css('color', color);
+        TweenMax.to($txt, 0.6, {
+          color: color
+        });
+
+      }, function(){
+        var $txt = $(this).parent().parent().children('.quote-txt');
+        TweenMax.to($txt, 0.6, {
+          color: 'black'
+        });
+      });
+    }
+
+    turnColor('.xy-panel');
+    turnColor('.jr-panel');
+  </script>
+  </body>
+</html>
